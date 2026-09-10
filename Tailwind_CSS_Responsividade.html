@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock para quem quer - Tailwind CSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-red-900 text-gray-100 font-sans leading-normal tracking-normal">
+
+  <nav class="bg-black border-b border-red-700 p-5 sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-red-600 tracking-wider uppercase">Rock Para Quem Quer</h1>
+      
+   
+      <div class="hidden md:flex space-x-8 font-semibold">
+        <a href="#tabela" class="hover:text-red-500 transition">Bandas</a>
+        <a href="#formulario" class="hover:text-red-500 transition">Recomendar</a>
+        <a href="#galeria" class="hover:text-red-500 transition">Galeria</a>
+      </div>
+
+      <button id="btn-menu" class="md:hidden text-2xl text-white focus:outline-none">☰</button>
+    </div>
+
+    <div id="menu-mobile" class="hidden md:hidden flex-col space-y-3 mt-4 px-2 border-t border-gray-800 pt-3">
+      <a href="#tabela" class="block hover:text-red-500 py-1">Bandas</a>
+      <a href="#formulario" class="block hover:text-red-500 py-1">Recomendar</a>
+      <a href="#galeria" class="block hover:text-red-500 py-1">Galeria</a>
+    </div>
+  </nav>
+  <main class="max-w-6xl mx-auto p-6 space-y-20 my-16">
+
+    <section id="tabela" class="bg-gray-800 p-20 rounded-lg shadow-lg border border-white-700">
+      <h1 class="text-2xl font-bold mb-8 text-red-500 uppercase">Meu Top Bandas de Rock</h1>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-gray-900 text-gray-300 border-b border-gray-700">
+              <th class="p-4">Rank</th>
+              <th class="p-4">Nome</th>
+              <th class="p-4">País</th>
+              <th class="p-4">Música Fav.</th>
+              <th class="p-4">Ouvir no YT</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-700">
+            <tr class="hover:bg-gray-700/50 transition">
+              <td class="p-4 font-bold text-red-400">01</td>
+              <td class="p-4 font-medium">Black Sabbath</td>
+              <td class="p-4">Inglaterra</td>
+              <td class="p-4 text-red-400 font-semibold">Killing Yourself to Live</td>
+              <td class="p-4">
+                <a href="https://www.youtube.com/watch?v=jCehccEZzX4" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:text-red-400 underline font-semibold flex items-center gap-1">
+                  Ouvir música no youtube
+                </a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-700/50 transition">
+              <td class="p-4 font-bold text-red-400">02</td>
+              <td class="p-4 font-medium">Red Hot Chili Peppers</td>
+              <td class="p-4">Estados Unidos</td>
+              <td class="p-4 text-red-400 font-semibold">Suck My Kiss</td>
+              <td class="p-4">
+                <a href="https://www.youtube.com/watch?v=C6jElKMMOWM" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:text-red-400 underline font-semibold flex items-center gap-1">
+                  Ouvir música no youtube
+                </a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-700/50 transition">
+              <td class="p-4 font-bold text-red-400">03</td>
+              <td class="p-4 font-medium">Slayer</td>
+              <td class="p-4">EUA</td>
+              <td class="p-4 text-red-400 font-semibold">Show No Mercy</td>
+              <td class="p-4">
+                <a href="https://www.youtube.com/watch?v=4-s33cfFMCQ" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:text-red-400 underline font-semibold flex items-center gap-1">
+                  Ouvir música no youtube
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="formulario" class="bg-gray-800 p-20 rounded-lg shadow-lg border border-white-700">
+      <h2 class="text-2xl font-bold mb-8 text-red-500 uppercase">Recomende uma Banda</h2>
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <label class="block text-gray-300 text-sm mb-3 font-semibold">Nome da Banda</label>
+          <input type="text" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Ex: Led Zeppelin" required>
+        </div>
+        <div>
+          <label class="block text-gray-300 text-sm mb-3 font-semibold">Gênero / Subgênero</label>
+          <input type="text" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Ex: Heavy Metal, Hard Rock" required>
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-gray-300 text-sm mb-3 font-semibold">Recomenda uma música</label>
+          <input type="text" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Ex: Stairway to Heaven" required>
+        </div>
+        <div class="md:col-span-2 pt-2">
+          <button type="submit" class="bg-red-700 hover:bg-red-600 text-white font-bold py-3 px-8 rounded uppercase transition tracking-wider">
+            Enviar Recomendação
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section id="galeria" class="bg-gray-800 p-20 rounded-lg shadow-lg border border-white-700">
+      <h2 class="text-2xl font-bold mb-8 text-red-500 uppercase">Galeria do Rock (Minhas BANDAS)</h2>
+   
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-gray-900 p-4 rounded-lg border border-red-700 shadow-md">
+          <label class="block text-gray-200 font-bold text-center mb-3">Black Sabbath</label>
+          <div class="overflow-hidden rounded group">
+            <img src="Black_sabbath.webp" alt="Black Sabbath" class="w-full h-52 object-cover cursor-pointer group-hover:scale-105 transition duration-300 btn-abrir-modal">
+          </div>
+        </div>
+
+        <div class="bg-gray-900 p-4 rounded-lg border border-red-700 shadow-md">
+          <label class="block text-gray-200 font-bold text-center mb-3">Red Hot Chili Peppers</label>
+          <div class="overflow-hidden rounded group">
+            <img src="red_hot_chili_peppers.jfif" alt="Red Hot Chili Peppers" class="w-full h-52 object-cover cursor-pointer group-hover:scale-105 transition duration-300 btn-abrir-modal">
+          </div>
+        </div>
+
+        <div class="bg-gray-900 p-4 rounded-lg border border-red-700 shadow-md">
+          <label class="block text-gray-200 font-bold text-center mb-3">Slayer</label>
+          <div class="overflow-hidden rounded group">
+            <img src="Slayer.jfif" alt="Slayer" class="w-full h-52 object-cover cursor-pointer group-hover:scale-105 transition duration-300 btn-abrir-modal">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center p-4 z-50">
+    <div class="bg-gray-800 border border-red-600 rounded-lg p-8 max-w-md w-full text-center shadow-2xl relative">
+      <h3 class="text-xl font-bold text-red-500 mb-3">Visualização da Galeria</h3>
+      <p class="text-gray-300 text-sm mb-6">Você abriu uma foto da galeria</p>
+      <button id="btn-fechar-modal" class="bg-red-700 hover:bg-red-600 text-white font-bold px-6 py-2 rounded transition uppercase">
+        Fechar
+      </button>
+    </div>
+  </div>
+
+  <script src="js_script.js"></script>
+
+</body>
+</html>
